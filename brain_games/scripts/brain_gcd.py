@@ -28,5 +28,8 @@ def play_gcd_game():
 
     print(f"Congratulations, {name}!")
 
+def main():
+    play_gcd_game()
+
 if __name__ == "__main__":
     play_gcd_game()

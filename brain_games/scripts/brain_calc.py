@@ -36,5 +36,8 @@ def play_calc_game():
 
     print(f"Congratulations, {name}!")
 
+def main():
+    play_calc_game()
+
 if __name__ == "__main__":
     play_calc_game()

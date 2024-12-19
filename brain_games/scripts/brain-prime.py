@@ -34,5 +34,8 @@ def play_prime_game():
 
     print(f"Congratulations, {name}!")
 
+def main():
+    play_prime_game()
+
 if __name__ == "__main__":
     play_prime_game()

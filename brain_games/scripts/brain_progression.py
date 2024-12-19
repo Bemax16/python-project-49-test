@@ -37,6 +37,8 @@ def play_progression_game():
 
     print(f"Congratulations, {name}!")
 
+def main():
+    play_progression_game()
 
 if __name__ == "__main__":
     play_progression_game()
