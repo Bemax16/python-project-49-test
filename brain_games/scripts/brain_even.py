@@ -1,11 +1,9 @@
 import random
 
 def is_even(number):
-    """Проверяет, является ли число четным."""
     return number % 2 == 0
 
 def play_even_game():
-    """Игра "Проверка на чётность"."""
     print("Welcome to the Brain Games!")
     name = input("May I have your name? ")
     print(f"Hello, {name}!")
@@ -32,7 +30,6 @@ def play_even_game():
     print(f"Congratulations, {name}!")
 
 def main():
-    """Точка входа для запуска игры."""
     play_even_game()
 
 if __name__ == "__main__":
