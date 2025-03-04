@@ -1,5 +1,6 @@
 import random
 
+
 def calculate_expression(num1, num2, operator):
     if operator == '+':
         return num1 + num2
@@ -7,6 +8,7 @@ def calculate_expression(num1, num2, operator):
         return num1 - num2
     elif operator == '*':
         return num1 * num2
+
 
 def play_calc_game():
     print("Welcome to the Brain Games!")
@@ -30,7 +32,8 @@ def play_calc_game():
             print("Correct!")
             correct_answers += 1
         else:
-            print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
+            print(f"'{answer}' is wrong answer ;(. "
+                  f"Correct answer was '{correct_answer}'.")
             print(f"Let's try again, {name}!")
             return
 
@@ -38,6 +41,7 @@ def play_calc_game():
 
 def main():
     play_calc_game()
+
 
 if __name__ == "__main__":
     play_calc_game()
