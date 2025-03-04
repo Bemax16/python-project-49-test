@@ -1,6 +1,7 @@
 import random
 import math
 
+
 def play_gcd_game():
     print("Welcome to the Brain Games!")
     name = input("May I have your name? ")
@@ -22,14 +23,18 @@ def play_gcd_game():
             print("Correct!")
             correct_answers += 1
         else:
-            print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
+            print(
+                f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'."
+            )
             print(f"Let's try again, {name}!")
             return
 
     print(f"Congratulations, {name}!")
 
+
 def main():
     play_gcd_game()
+
 
 if __name__ == "__main__":
     play_gcd_game()

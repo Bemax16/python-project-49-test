@@ -1,12 +1,14 @@
 import random
 
+
 def is_prime(number):
     if number <= 1:
         return False
-    for i in range(2, int(number ** 0.5) + 1):
+    for i in range(2, int(number**0.5) + 1):
         if number % i == 0:
             return False
     return True
+
 
 def play_prime_game():
     print("Welcome to the Brain Games!")
@@ -28,14 +30,18 @@ def play_prime_game():
             print("Correct!")
             correct_answers += 1
         else:
-            print(f'"{answer}" is wrong answer ;(. Correct answer was "{correct_answer}".')
+            print(
+                f'"{answer}" is wrong answer ;(. Correct answer was "{correct_answer}".'
+            )
             print(f"Let's try again, {name}!")
             return
 
     print(f"Congratulations, {name}!")
 
+
 def main():
     play_prime_game()
+
 
 if __name__ == "__main__":
     play_prime_game()

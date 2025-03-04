@@ -31,14 +31,18 @@ def play_progression_game():
             print("Correct!")
             correct_answers += 1
         else:
-            print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
+            print(
+                f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'."
+            )
             print(f"Let's try again, {name}!")
             return
 
     print(f"Congratulations, {name}!")
 
+
 def main():
     play_progression_game()
+
 
 if __name__ == "__main__":
     play_progression_game()
