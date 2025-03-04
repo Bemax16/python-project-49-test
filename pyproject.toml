@@ -2,7 +2,9 @@
 name = "hexlet-code"
 version = "0.1.0"
 description = "Brain Games Project"
-authors = ["Daniil Verbitskiy <danilverbitskiy@gmail.com>"]
+authors = [
+    { name = "Daniil Verbitskiy", email = "danilverbitskiy@gmail.com" }
+]
 dependencies = [
     "prompt>=0.4.1",
     "ruff>=0.9.9"
