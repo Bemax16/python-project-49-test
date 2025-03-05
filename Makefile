@@ -1,21 +1,18 @@
-
 install:
-	poetry install
-
-brain-games:
-	poetry run brain-games
+	uv venv create
+	uv pip install --editable .
 
 build:
-	poetry build
+	uv pip wheel --wheel-dir=dist .
 
 publish:
-	poetry publish --dry-run
+	uv pip publish --dry-run
 
 package-install:
-	python3 -m pip install --user dist/*.whl
+	uv pip install dist/*.whl
 
-make-lint:
-	poetry run flake8 brain_games
+lint:
+	uv pip run ruff check brain_games
 
 brain-games:
 	uv venv exec python -m brain_games.scripts.brain_games

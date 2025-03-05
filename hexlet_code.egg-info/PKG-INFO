@@ -1,0 +1,13 @@
+Metadata-Version: 2.2
+Name: hexlet-code
+Version: 0.1.0
+Summary: Brain Games Project
+Author-email: Daniil Verbitskiy <danilverbitskiy@gmail.com>
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: prompt>=0.4.1
+Requires-Dist: ruff>=0.9.9
+
+### Hexlet tests and linter status:
+[![Actions Status](https://github.com/Bemax16/python-project-49/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Bemax16/python-project-49/actions)
+[![Maintainability](https://api.codeclimate.com/v1/badges/edb5370f8b9891a98bdb/maintainability)](https://codeclimate.com/github/Bemax16/python-project-49/maintainability)
