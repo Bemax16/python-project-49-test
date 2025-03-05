@@ -13,6 +13,7 @@ requires-python = ">=3.12"
 readme = "README.md"
 
 [tool.uv]
+packages = ["brain_games"]
 
 [build-system]
 requires = ["setuptools", "wheel"]
