@@ -1,21 +1,20 @@
 install:
-	uv venv create
-	uv pip install --editable .
+	uv sync
 
 build:
-	uv pip wheel --wheel-dir=dist .
+	uv build
 
 publish:
 	uv pip publish --dry-run
 
 package-install:
-	uv pip install dist/*.whl
+	uv tool install dist/*.whl
 
 lint:
-	uv pip run ruff check brain_games
+	uv run ruff check brain_games
 
 brain-games:
-	uv venv exec python -m brain_games.scripts.brain_games
+	uv run brain-games
 
 brain-even:
 	uv venv exec python -m brain_games.scripts.brain_even

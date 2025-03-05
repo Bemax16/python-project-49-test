@@ -6,21 +6,32 @@ authors = [
     { name = "Daniil Verbitskiy", email = "danilverbitskiy@gmail.com" }
 ]
 dependencies = [
+    "asciinema>=2.4.0",
     "prompt>=0.4.1",
-    "ruff>=0.9.9"
+    "ruff>=0.9.9",
 ]
 requires-python = ">=3.12"
 readme = "README.md"
 
-[tool.uv]
-packages = ["brain_games"]
-
 [build-system]
-requires = ["setuptools", "wheel"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
-[tool.setuptools]
+[tool.hatch.build.targets.wheel]
 packages = ["brain_games"]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.9.9",
+]
 
 [project.scripts]
 brain-games = "brain_games.scripts.brain_games:main"
+brain-calc = "brain_games.scripts.brain_calc:main"
+brain-gcd = "brain_games.scripts.brain_gcd:main"
+brain-prime = "brain_games.scripts.brain_prime:main"
+brain-progression = "brain_games.scripts.brain_progression:main"
+brain-even = "brain_games.scripts.brain_even:main"
+
+[tool.ruff]
+line-length = 88  # Или можно 100, если хочешь чуть больше
