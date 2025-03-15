@@ -1,4 +1,5 @@
 import random
+
 from brain_games.engine import run_game
 
 
@@ -19,7 +20,8 @@ def game_logic():
 
 
 def main():
-    run_game(game_logic, 'Answer "yes" if given number is prime. Otherwise answer "no".')
+    run_game(game_logic, 'Answer "yes" if given number is prime. '
+                         'Otherwise answer "no".')
 
 
 if __name__ == "__main__":

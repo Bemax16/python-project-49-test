@@ -1,5 +1,6 @@
 import sys
 
+
 def run_game(game_logic, game_instruction):
     print("Welcome to the Brain Games!")
     name = input("May I have your name? ")
