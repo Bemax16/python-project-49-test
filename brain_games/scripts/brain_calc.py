@@ -1,5 +1,7 @@
 import random
 
+import interface
+
 
 def calculate_expression(num1, num2, operator):
     if operator == "+":
@@ -11,10 +13,7 @@ def calculate_expression(num1, num2, operator):
 
 
 def play_calc_game():
-    print("Welcome to the Brain Games!")
-    name = input("May I have your name? ")
-    print(f"Hello, {name}!")
-    print("What is the result of the expression?")
+    name = interface.start_game()
 
     rounds_to_win = 3
     correct_answers = 0
@@ -28,17 +27,7 @@ def play_calc_game():
 
         correct_answer = calculate_expression(num1, num2, operator)
 
-        if answer == str(correct_answer):
-            print("Correct!")
-            correct_answers += 1
-        else:
-            print(
-                f"'{answer}' is wrong answer ;(. "
-                f"Correct answer was '{correct_answer}'."
-            )
-            print(f"Let's try again, {name}!")
-            return
-
+        correct_answers += interface.check_answer(answer, correct_answer)
     print(f"Congratulations, {name}!")
 
 

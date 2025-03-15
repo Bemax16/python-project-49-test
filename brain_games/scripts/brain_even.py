@@ -1,15 +1,14 @@
 import random
 
+import interface
+
 
 def is_even(number):
     return number % 2 == 0
 
 
 def play_even_game():
-    print("Welcome to the Brain Games!")
-    name = input("May I have your name? ")
-    print(f"Hello, {name}!")
-    print('Answer "yes" if the number is even, otherwise answer "no".')
+    name = interface.start_game()
 
     rounds_to_win = 3
     correct_answers = 0
@@ -21,16 +20,7 @@ def play_even_game():
 
         correct_answer = "yes" if is_even(number) else "no"
 
-        if answer == correct_answer:
-            print("Correct!")
-            correct_answers += 1
-        else:
-            print(
-                f"'{answer}' is wrong answer ;(. "
-                f"Correct answer was '{correct_answer}'."
-            )
-            print(f"Let's try again, {name}!")
-            return
+        correct_answers += interface.check_answer(answer, correct_answer)
 
     print(f"Congratulations, {name}!")
 

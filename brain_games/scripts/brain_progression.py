@@ -1,5 +1,7 @@
 import random
 
+import interface
+
 
 def generate_progression():
     length = random.randint(5, 10)
@@ -13,10 +15,7 @@ def generate_progression():
 
 
 def play_progression_game():
-    print("Welcome to the Brain Games!")
-    name = input("May I have your name? ")
-    print(f"Hello, {name}!")
-    print("What number is missing in the progression?")
+    name = interface.start_game()
 
     rounds_to_win = 3
     correct_answers = 0
@@ -27,16 +26,7 @@ def play_progression_game():
 
         answer = input("Your answer: ").strip()
 
-        if answer == str(correct_answer):
-            print("Correct!")
-            correct_answers += 1
-        else:
-            print(
-                f"'{answer}' is wrong answer ;(. "
-                f"Correct answer was '{correct_answer}'."
-            )
-            print(f"Let's try again, {name}!")
-            return
+        correct_answers += interface.check_answer(answer, correct_answer)
 
     print(f"Congratulations, {name}!")
 
