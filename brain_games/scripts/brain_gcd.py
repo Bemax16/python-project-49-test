@@ -6,6 +6,7 @@ from brain_games.scripts import interface
 
 def play_gcd_game():
     name = interface.start_game()
+    print('Find the greatest common divisor of given numbers.')
 
     rounds_to_win = 3
     correct_answers = 0

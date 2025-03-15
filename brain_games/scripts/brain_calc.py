@@ -14,7 +14,7 @@ def calculate_expression(num1, num2, operator):
 
 def play_calc_game():
     name = interface.start_game()
-
+    print('What is the result of the expression?')
     rounds_to_win = 3
     correct_answers = 0
 

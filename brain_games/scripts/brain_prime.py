@@ -14,6 +14,7 @@ def is_prime(number):
 
 def play_prime_game():
     name = interface.start_game()
+    print('Answer "yes" if given number is prime. Otherwise answer "no".')
 
     rounds_to_win = 3
     correct_answers = 0

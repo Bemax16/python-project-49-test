@@ -16,6 +16,7 @@ def generate_progression():
 
 def play_progression_game():
     name = interface.start_game()
+    print('What number is missing in the progression?')
 
     rounds_to_win = 3
     correct_answers = 0

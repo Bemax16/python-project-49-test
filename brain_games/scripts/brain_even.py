@@ -9,6 +9,7 @@ def is_even(number):
 
 def play_even_game():
     name = interface.start_game()
+    print('Answer "yes" if the number is even, otherwise answer "no".')
 
     rounds_to_win = 3
     correct_answers = 0
