@@ -27,7 +27,7 @@ def play_calc_game():
 
         correct_answer = calculate_expression(num1, num2, operator)
 
-        correct_answers += interface.check_answer(answer, correct_answer)
+        correct_answers += interface.check_answer(answer, correct_answer, name)
     print(f"Congratulations, {name}!")
 
 

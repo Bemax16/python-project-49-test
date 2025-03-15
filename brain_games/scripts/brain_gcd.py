@@ -18,7 +18,7 @@ def play_gcd_game():
 
         correct_answer = math.gcd(num1, num2)
 
-        correct_answers += interface.check_answer(answer, correct_answer)
+        correct_answers += interface.check_answer(answer, correct_answer, name)
 
     print(f"Congratulations, {name}!")
 

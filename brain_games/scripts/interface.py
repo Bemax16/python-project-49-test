@@ -9,7 +9,7 @@ def start_game():
     return name
 
 
-def check_answer(answer, correct_answer):
+def check_answer(answer, correct_answer, name):
     if answer == correct_answer:
         print("Correct!")
         return 1
@@ -18,5 +18,6 @@ def check_answer(answer, correct_answer):
             f"'{answer}' is wrong answer ;(. "
             f"Correct answer was '{correct_answer}'."
         )
+        print(f"Let's try again, {name}!")
         sys.exit()
 
