@@ -1,20 +1,15 @@
-import random
-from brain_games.engine import run_game
+#!/usr/bin/env python3
+
+from brain_games.cli import welcome_user
 
 
-def game_logic():
-    num1 = random.randint(1, 50)
-    num2 = random.randint(1, 50)
-    operator = random.choice(["+", "-", "*"])
-
-    question = f"{num1} {operator} {num2}"
-    correct_answer = eval(question)
-
-    return question, correct_answer
+def greeting():
+    print("Welcome to the Brain Games!")
+    welcome_user()
 
 
 def main():
-    run_game(game_logic, "What is the result of the expression?")
+    greeting()
 
 
 if __name__ == "__main__":
