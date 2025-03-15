@@ -1,7 +1,7 @@
 import math
 import random
 
-import interface
+from brain_games.scripts import interface
 
 
 def play_gcd_game():

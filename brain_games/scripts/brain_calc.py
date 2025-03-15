@@ -1,6 +1,6 @@
 import random
 
-import interface
+from brain_games.scripts import interface
 
 
 def calculate_expression(num1, num2, operator):
