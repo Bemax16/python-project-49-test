@@ -1,6 +1,5 @@
 import random
-
-from brain_games.scripts import interface
+from brain_games.engine import run_game
 
 
 def is_prime(number):
@@ -12,28 +11,16 @@ def is_prime(number):
     return True
 
 
-def play_prime_game():
-    name = interface.start_game()
-    print('Answer "yes" if given number is prime. Otherwise answer "no".')
+def game_logic():
+    number = random.randint(1, 100)
+    correct_answer = "yes" if is_prime(number) else "no"
 
-    rounds_to_win = 3
-    correct_answers = 0
-
-    while correct_answers < rounds_to_win:
-        number = random.randint(1, 100)
-        print(f"Question: {number}")
-        answer = input("Your answer: ").strip().lower()
-
-        correct_answer = "yes" if is_prime(number) else "no"
-
-        correct_answers += interface.check_answer(answer, correct_answer, name)
-
-    print(f"Congratulations, {name}!")
+    return number, correct_answer
 
 
 def main():
-    play_prime_game()
+    run_game(game_logic, 'Answer "yes" if given number is prime. Otherwise answer "no".')
 
 
 if __name__ == "__main__":
-    play_prime_game()
+    main()

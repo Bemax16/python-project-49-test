@@ -1,32 +1,21 @@
-import math
 import random
+import math
+from brain_games.engine import run_game
 
-from brain_games.scripts import interface
 
+def game_logic():
+    num1 = random.randint(1, 100)
+    num2 = random.randint(1, 100)
 
-def play_gcd_game():
-    name = interface.start_game()
-    print('Find the greatest common divisor of given numbers.')
+    question = f"{num1} {num2}"
+    correct_answer = math.gcd(num1, num2)
 
-    rounds_to_win = 3
-    correct_answers = 0
-
-    while correct_answers < rounds_to_win:
-        num1 = random.randint(1, 100)
-        num2 = random.randint(1, 100)
-        print(f"Question: {num1} {num2}")
-        answer = int(input("Your answer: ").strip())
-
-        correct_answer = math.gcd(num1, num2)
-
-        correct_answers += interface.check_answer(answer, correct_answer, name)
-
-    print(f"Congratulations, {name}!")
+    return question, correct_answer
 
 
 def main():
-    play_gcd_game()
+    run_game(game_logic, "Find the greatest common divisor of given numbers.")
 
 
 if __name__ == "__main__":
-    play_gcd_game()
+    main()

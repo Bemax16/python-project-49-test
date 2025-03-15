@@ -1,34 +1,17 @@
 import random
-
-from brain_games.scripts import interface
-
-
-def is_even(number):
-    return number % 2 == 0
+from brain_games.engine import run_game
 
 
-def play_even_game():
-    name = interface.start_game()
-    print('Answer "yes" if the number is even, otherwise answer "no".')
+def game_logic():
+    number = random.randint(1, 100)
+    correct_answer = "yes" if number % 2 == 0 else "no"
 
-    rounds_to_win = 3
-    correct_answers = 0
-
-    while correct_answers < rounds_to_win:
-        number = random.randint(1, 100)
-        print(f"Question: {number}")
-        answer = input("Your answer: ").strip().lower()
-
-        correct_answer = "yes" if is_even(number) else "no"
-
-        correct_answers += interface.check_answer(answer, correct_answer, name)
-
-    print(f"Congratulations, {name}!")
+    return number, correct_answer
 
 
 def main():
-    play_even_game()
+    run_game(game_logic, 'Answer "yes" if the number is even, otherwise answer "no".')
 
 
 if __name__ == "__main__":
-    play_even_game()
+    main()
