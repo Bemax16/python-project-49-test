@@ -23,7 +23,7 @@ def play_calc_game():
         num2 = random.randint(1, 50)
         operator = random.choice(["+", "-", "*"])
         print(f"Question: {num1} {operator} {num2}")
-        answer = input("Your answer: ").strip()
+        answer = int(input("Your answer: "))
 
         correct_answer = calculate_expression(num1, num2, operator)
 

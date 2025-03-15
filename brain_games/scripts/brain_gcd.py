@@ -15,7 +15,7 @@ def play_gcd_game():
         num1 = random.randint(1, 100)
         num2 = random.randint(1, 100)
         print(f"Question: {num1} {num2}")
-        answer = input("Your answer: ").strip()
+        answer = int(input("Your answer: ").strip())
 
         correct_answer = math.gcd(num1, num2)
 

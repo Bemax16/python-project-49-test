@@ -25,7 +25,7 @@ def play_progression_game():
         progression, correct_answer = generate_progression()
         print("Question:", " ".join(map(str, progression)))
 
-        answer = input("Your answer: ").strip()
+        answer = int(input("Your answer: ").strip())
 
         correct_answers += interface.check_answer(answer, correct_answer, name)
 
